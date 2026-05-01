@@ -7,7 +7,7 @@ const projects = [
     title: "PickNCare",
     description:
       "A modern healthcare platform focused on connecting users with medical services, enabling easy appointment booking, health tracking, and access to reliable care solutions through a clean and user-friendly interface.",
-    image: "/pickncare.jpeg",
+    image: "/pickncare.png",
     tags: commonTags,
     link: "https://pickncare.com",
   },
@@ -31,7 +31,7 @@ const projects = [
     title: "BinaryBurst Solutions",
     description:
       "A professional IT solutions platform providing services such as cybersecurity, cloud infrastructure, and managed IT support, designed to simplify complex technology and deliver reliable business solutions.",
-    image: "/binaryburst.png",
+    image: "/binaryburstsolutions.png",
     tags: commonTags,
     link: "https://binaryburstsolutions.com",
   },
@@ -39,7 +39,7 @@ const projects = [
     title: "School Management System",
     description:
       "A comprehensive system for managing school operations, including student records, attendance, exams, and communication, built to streamline administrative workflows and improve efficiency.",
-    image: "/school-management.png",
+    image: "/SMS.png",
     tags: commonTags,
     link: "#",
   },
@@ -103,7 +103,13 @@ const Project = () => {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover: translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover: translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  </a>
                 </div>
                 <p className="text-sm text-muted-foreground">
                   {project.description}
