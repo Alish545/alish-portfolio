@@ -1,6 +1,6 @@
 import { AnimatedBorderButton } from "@/components/AnimatiedBorderButton";
 import Button from "@/components/Button";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, Download } from "lucide-react";
 
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
@@ -15,7 +15,7 @@ const skills = [
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center" id="home">
       {/* BG */}
       <div className="absolute inset-0">
         <img
@@ -44,7 +44,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 pt-32 pb-200 relative z-10">
+      <div className="container mx-auto px-6 pt-26 pb-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
           <div className="space-y-8">
@@ -57,7 +57,7 @@ const Hero = () => {
 
             {/* headline */}
             <div className="space-y-4">
-              <h1 className="text-5xl md: text-6xl lg:text=7xl font-bold leading-tight animate-fade-in animation-delay-100">
+              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Cradting{" "}
                 <span className="text-primary glow-text">Digital </span> <br />
                 experiences with
@@ -147,16 +147,31 @@ const Hero = () => {
           <p className="text-sm text-muted-foreground mb-6 text-center">
             Technologies I work with
           </p>
-          <div className="relative">
-            <div>
+          <div className="relative overflow-hidden">
+            <div className="flex animate-marquee">
               {[...skills, ...skills].map((skill, idx) => (
-                <div key={idx}>
-                  <span>{skill}</span>
+                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors duration-300 cursor-pointer">
+                    {skill}
+                  </span>
                 </div>
               ))}
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800 cursor-pointer z-10">
+        {" "}
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground z-10"
+        >
+          <span className="text-xs uppercase tracking-wider hover:text-primary transition-colors duration-300">
+            Scroll
+          </span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </section>
   );
