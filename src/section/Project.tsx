@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 
 const commonTags = ["React", "TypeScript", "Tailwind CSS"];
+const aiTags = ["Python", "YOLOv8", "CNN", "OpenCV", "FastAPI", "MySQL"];
 
 const hasValidLink = (link?: string) => {
   return Boolean(link && link.trim() !== "" && link.trim() !== "#");
@@ -46,6 +47,14 @@ const projects = [
     image: "/SMS.png",
     tags: commonTags,
     link: "#",
+  },
+  {
+    title: "Vehicle Number Plate Detection",
+    description:
+      "An Automatic Number Plate Recognition system that detects vehicle number plates using YOLOv8 and recognizes characters using a custom CNN model. Integrated with a FastAPI web application where users can upload images or videos and get recognized plate numbers in real time.",
+    image: "/number-plate.png",
+    tags: aiTags,
+    link: "https://github.com/Alish545/Number-Plate-Project",
   },
 ];
 
