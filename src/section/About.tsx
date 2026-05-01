@@ -1,5 +1,4 @@
 import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
-import React from "react";
 
 const highlights = [
   {

@@ -80,9 +80,9 @@ const Navbar = () => {
               </a>
             ))}
 
-            <Button size="sm" onClick={() => setIsMobileMenuOpen(false)}>
+            {/* <Button size="sm" onClick={() => setIsMobileMenuOpen(false)}>
               Contact me
-            </Button>
+            </Button> */}
           </div>
         </div>
       )}
