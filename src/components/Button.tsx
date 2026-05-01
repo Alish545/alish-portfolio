@@ -1,20 +1,21 @@
-import React from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 type ButtonSize = "sm" | "default" | "lg";
 
-type ButtonProps = {
-  classname?: string;
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  className?: string;
   size?: ButtonSize;
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const Button = ({
-  classname = "",
+  className = "",
   size = "default",
   children,
+  ...props
 }: ButtonProps) => {
   const baseClasses =
-    "relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25 disabled:opacity-50";
+    "relative overflow-hidden rounded-full font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-primary bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/25";
 
   const sizeClasses: Record<ButtonSize, string> = {
     sm: "px-4 py-2 text-sm",
@@ -22,10 +23,10 @@ const Button = ({
     lg: "px-8 py-4 text-lg",
   };
 
-  const classes = `${baseClasses} ${sizeClasses[size]} ${classname}`;
+  const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;
 
   return (
-    <button className={classes}>
+    <button className={classes} {...props}>
       <span className="relative flex items-center justify-center gap-2">
         {children}
       </span>
