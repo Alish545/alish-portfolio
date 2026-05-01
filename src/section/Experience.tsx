@@ -1,6 +1,6 @@
 const experiences = [
   {
-    period: "February 2026 — Present",
+    period: "May 2025 — Present",
     role: "Junior Frontend Developer",
     company: "Binaryburst Solution, Bhaktapur",
     description:
@@ -37,7 +37,7 @@ const experiences = [
     current: true,
   },
   {
-    period: "May 2026 — Present",
+    period: "April 2026 — Present",
     role: "Frontend Developer",
     company: "Binaryburst Solution — Real Estate Website / CRM Platform",
     description:

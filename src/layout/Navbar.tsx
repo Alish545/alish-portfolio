@@ -53,7 +53,11 @@ const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block cursor-pointer">
-          <Button size="sm">Contact me</Button>
+          <a href="#contact">
+            <Button size="sm" className="cursor-pointer">
+              Contact me
+            </Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -80,9 +84,15 @@ const Navbar = () => {
               </a>
             ))}
 
-            {/* <Button size="sm" onClick={() => setIsMobileMenuOpen(false)}>
-              Contact me
-            </Button> */}
+            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+              <Button
+                size="sm"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="cursor-pointer"
+              >
+                Contact me
+              </Button>
+            </a>
           </div>
         </div>
       )}

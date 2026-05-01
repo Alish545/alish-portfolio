@@ -78,22 +78,36 @@ const Hero = () => {
 
             {/* CTA */}
             <div className="flex flex-wrap gap-4 aniamte-fate-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
+              <a href="#contact">
+                <Button size="lg" className="cursor-pointer">
+                  Contact Me <ArrowRight className="w-5 h-5" />
+                </Button>
+              </a>
+
+              <a
+                href={`${import.meta.env.BASE_URL}Alish_Tuladhar_CV.pdf`}
+                download="Alish_Tuladhar_CV.pdf"
+              >
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </AnimatedBorderButton>
+              </a>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow Me: </span>
               {[
-                { icon: FaGithub, href: "#" },
-                { icon: FaLinkedin, href: "#" },
-                { icon: FaInstagram, href: "#" },
+                { icon: FaGithub, href: "https://github.com/Alish545" },
+                {
+                  icon: FaLinkedin,
+                  href: "https://www.linkedin.com/in/alish-tuladhar-a6377831b?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+                },
+                {
+                  icon: FaInstagram,
+                  href: "https://www.instagram.com/alishtuladhar?igsh=cHgyNHZ3dmh4dHhr&utm_source=qr",
+                },
               ].map((social, idx) => {
                 const Icon = social.icon;
 
@@ -118,7 +132,7 @@ const Hero = () => {
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src={`${import.meta.env.BASE_URL}profile-photo.jpg`}
+                  src={`${import.meta.env.BASE_URL}profile-pic.png`}
                   alt="Alish Tuladhar"
                   className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
@@ -128,7 +142,7 @@ const Hero = () => {
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                     <span className="text-sm font-medium">
-                      Availabe For work
+                      Available For Work{" "}
                     </span>
                   </div>
                 </div>
