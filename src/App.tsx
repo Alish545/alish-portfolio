@@ -3,7 +3,7 @@ import Hero from "@/section/Hero";
 import About from "@/section/About";
 import Project from "./section/Project";
 import Experience from "@/section/Experience";
-import Testimonials from "@/section/Testimonials";
+// import Testimonials from "@/section/Testimonials";
 import Contact from "@/section/Contact";
 
 function App() {
