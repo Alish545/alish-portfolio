@@ -111,7 +111,7 @@ const Project = () => {
                     <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover: translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </a>
                 </div>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground text-justify">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">

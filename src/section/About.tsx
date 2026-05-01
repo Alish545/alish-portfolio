@@ -3,27 +3,27 @@ import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Frontend Development",
     description:
-      "I write clean, maintainable code that follows best practices and design patterns.",
+      "Experienced in building clean, responsive, and user-friendly interfaces using React.js, TypeScript/TSX, and Tailwind CSS.",
   },
   {
     icon: Lightbulb,
-    title: "Innovative Solutions",
+    title: "Problem Solving",
     description:
-      "I thrive on solving complex problems with innovative and efficient solutions.",
+      "I focus on understanding requirements clearly and turning them into practical, usable frontend solutions.",
   },
   {
     icon: Rocket,
-    title: "Performance Optimization",
+    title: "Web & Mobile Support",
     description:
-      "I optimize web applications for speed and performance, ensuring fast load times and smooth interactions.",
+      "Hands-on experience supporting web platforms, React Native basics, Flutter basics, iOS/Android deployment, and Apple In-App Purchase flows.",
   },
   {
     icon: Users,
-    title: "Collaboration",
+    title: "Team Collaboration",
     description:
-      "I excel in collaborative environments, working effectively with cross-functional teams to achieve project goals.",
+      "Comfortable working with backend developers, UI/UX designers, QA, project managers, and DevOps teams in real project environments.",
   },
 ];
 
@@ -48,39 +48,37 @@ const About = () => {
               </span>
             </h2>
 
-            <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
+            <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200 text-justify">
               <p>
-                I’m a frontend developer focused on building modern, responsive,
-                and user-friendly web applications. I enjoy turning ideas into
-                real products using technologies like React, TypeScript, and
-                Tailwind CSS, with a strong emphasis on clean design and smooth
-                user experience.
+                I’m Alish Tuladhar, a Frontend Developer and recent B.Sc. CSIT
+                graduate with 1 year and 3 months of frontend development
+                experience, including a 3-month internship and ongoing work as a
+                Junior Frontend Developer.
               </p>
 
               <p>
-                My approach combines both creativity and logic — I care about
-                how things look just as much as how they work. Whether it’s
-                crafting reusable components, optimizing performance, or adding
-                subtle animations, I aim to create interfaces that feel
-                intuitive and engaging.
+                I primarily work with React.js, TypeScript/TSX, and Tailwind
+                CSS, building clean, responsive, and user-friendly web
+                interfaces. I have worked on real projects such as healthcare
+                booking platforms, real estate web interfaces, school management
+                systems, and mobile-supported application flows.
               </p>
 
               <p>
-                Outside of coding, I’m constantly learning and exploring new
-                tools in the frontend ecosystem. I’m passionate about improving
-                my skills and building projects that not only solve problems but
-                also deliver a polished, professional experience.
+                Along with web development, I’m also familiar with React Native
+                basics, Flutter basics, iOS/Android deployment support, and
+                Apple In-App Purchase integration. I enjoy learning new tools,
+                improving my frontend skills, and creating interfaces that are
+                simple, usable, and visually polished.
               </p>
             </div>
-            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
+            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300 text-justify">
               <p className="text-lg font-medium italic text-foreground">
-                My mission is to craft meaningful digital experiences that are
-                not only visually appealing but also intuitive and impactful. I
-                strive to build products that solve real problems, enhance user
-                interaction, and maintain high standards of performance and
-                accessibility. Through continuous learning and attention to
-                detail, I aim to grow as a developer while delivering work that
-                creates lasting value.
+                My goal is to grow as a frontend developer by building
+                practical, responsive, and user-focused digital products. I
+                focus on clean UI, reusable components, smooth user experience,
+                and continuous learning while contributing value to real-world
+                projects.
               </p>
             </div>
           </div>

@@ -58,18 +58,20 @@ const Hero = () => {
             {/* headline */}
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Cradting{" "}
-                <span className="text-primary glow-text">Digital </span> <br />
-                experiences with
+                Building{" "}
+                <span className="text-primary glow-text">responsive</span>{" "}
+                <br />
+                web interfaces with
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision
+                  clean UI
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 text-justify">
                 {" "}
-                Hi, I'am Alish Tuladhar - a frontend developer passionate about
-                creating immersive digital experiences in React, TypeScript and
+                Hi, I'm Alish Tuladhar - a Frontend Developer with 1 year and 3
+                months of experience building clean, responsive, and
+                user-friendly web interfaces using React.js, TypeScript/TSX, and
                 Tailwind CSS.
               </p>
             </div>
