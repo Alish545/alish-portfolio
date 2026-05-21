@@ -16,6 +16,25 @@ const experiences = [
     ],
     current: true,
   },
+
+  {
+    period: "April 2026 — Present",
+    role: "Frontend Developer",
+    company: "Binaryburst Solution — Real Estate Website / CRM Platform",
+    description:
+      "Working on a real estate website and CRM platform. Building landing and home pages for superadmin and agency sides, including a static superadmin homepage and dynamic agency landing page connected with CRM data. Developing step-based listing creation and edit flows with structured form-driven UI, API data handling, validation, and frontend state management.",
+    technologies: [
+      "React.js",
+      "TypeScript/TSX",
+      "Tailwind CSS",
+      "TanStack Query",
+      "REST APIs",
+      "Formik",
+      "Yup",
+      "React Native Basics",
+    ],
+    current: true,
+  },
   {
     period: "May 2025 — Present",
     role: "Frontend Developer",
@@ -33,24 +52,6 @@ const experiences = [
       "Google Sign-In",
       "Apple Sign-In",
       "Flutter Basics",
-    ],
-    current: true,
-  },
-  {
-    period: "April 2026 — Present",
-    role: "Frontend Developer",
-    company: "Binaryburst Solution — Real Estate Website / CRM Platform",
-    description:
-      "Working on a real estate website and CRM platform. Building landing and home pages for superadmin and agency sides, including a static superadmin homepage and dynamic agency landing page connected with CRM data. Developing step-based listing creation and edit flows with structured form-driven UI, API data handling, validation, and frontend state management.",
-    technologies: [
-      "React.js",
-      "TypeScript/TSX",
-      "Tailwind CSS",
-      "TanStack Query",
-      "REST APIs",
-      "Formik",
-      "Yup",
-      "React Native Basics",
     ],
     current: true,
   },
