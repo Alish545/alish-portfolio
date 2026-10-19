@@ -10,10 +10,11 @@ function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <main>
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <main id="main-content">
         <Hero />
-        <About />
         <Project />
+        <About />
         <Experience />
         {/* <Testimonials /> */}
         <Contact />
