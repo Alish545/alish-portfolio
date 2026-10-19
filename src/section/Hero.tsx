@@ -1,5 +1,4 @@
 import DownloadCV from "@/components/DownloadCV";
-import Button from "@/components/Button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
@@ -75,11 +74,7 @@ const Hero = () => {
 
             {/* CTA */}
             <div className="hero-actions flex flex-wrap gap-3 animate-fade-in animation-delay-300">
-              <a href="#contact">
-                <Button size="default" className="cursor-pointer">
-                  Contact Me <ArrowRight className="w-5 h-5" />
-                </Button>
-              </a>
+              <a href="#contact" className="hero-contact-button">Contact Me <ArrowRight className="w-5 h-5" /></a>
 
               <DownloadCV className="hero-cv-button"/>
             </div>
@@ -125,8 +120,9 @@ const Hero = () => {
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-primary/10 blur-2xl animate-pulse" />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src={`${import.meta.env.BASE_URL}profile-pic.png`}
+                  src={`${import.meta.env.BASE_URL}profile-pic.webp`}
                   alt="Alish Tuladhar"
+                  width={1280} height={1600} fetchPriority="high" decoding="async"
                   className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
 

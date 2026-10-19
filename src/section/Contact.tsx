@@ -12,6 +12,10 @@ const Contact = () => {
     if (sending) return;
     const form = event.currentTarget;
     const data = new FormData(form);
+    if (!["name", "email", "message"].every(key => String(data.get(key) ?? "").trim())) {
+      setStatus({ type: "error", message: "Please fill in your name, email, and message." });
+      return;
+    }
     setSending(true);
     setStatus(null);
     try {

@@ -1,0 +1,14 @@
+import { CalendarDays, Globe2, CreditCard, Smartphone } from "lucide-react";
+const highlights = [
+  { icon: CalendarDays, title: "Booking & discovery", text: "Specific-date and weekly scheduling, caregiver and agency offers, approvals, cancellations, and profile details." },
+  { icon: Globe2, title: "Four-language experience", text: "English, Spanish, Brazilian Portuguese, and French—with translated interface labels and optional caregiver-bio translation." },
+  { icon: CreditCard, title: "Payments & background checks", text: "Separate Stripe care-service payments, Apple subscriptions, and consumable background-check purchase journeys." },
+  { icon: Smartphone, title: "Mobile delivery", text: "Shared Flutter codebase, signed iOS archives and Android App Bundles, versioning, and App Store release notes." },
+];
+const PickNCareStory = () => <div className="pickncare-story pickncare-compact">
+  <section className="pick-role"><div><p className="eyebrow">My contribution</p><h2>Frontend development.<br/><em>Mobile release ownership.</em></h2></div><div><p>I worked across the React website and shared Flutter app as <strong>Frontend Developer and Mobile App Deployment Lead</strong>, collaborating with backend developers on APIs, verification, and release blockers.</p><div className="tags">{["React / TypeScript", "Flutter / Dart", "REST APIs", "Stripe", "Apple IAP"].map(t=><span key={t}>{t}</span>)}</div></div></section>
+  <section className="pick-highlights" aria-label="Key contributions">{highlights.map(({icon:Icon,title,text},i)=><article key={title}><div className="pick-card-top"><Icon size={24} strokeWidth={1.5}/><span>0{i+1}</span></div><h3>{title}</h3><p>{text}</p></article>)}</section>
+  <section className="pick-decisions"><div><p className="eyebrow">The engineering challenge</p><h2>Change the interface.<br/><em>Protect the logic.</em></h2></div><div><p>I improved an existing production app without replacing its APIs, state management, or business rules.</p><ul><li><strong>Localization:</strong> translate labels, preserve machine values and user-written content; keep translated bios separate from booking state.</li><li><strong>Reliability:</strong> refine booking refreshes, UTC-to-profile timezone display, logout navigation, scheduling layouts, and chat-listener cleanup.</li><li><strong>Release coordination:</strong> distinguish production and Sandbox verification, working with backend developers to investigate purchase and review blockers.</li></ul></div></section>
+  <div className="pick-delivery"><span className="eyebrow">Delivery & takeaway</span><p>Contributed to a live web and mobile product, four-language localization, and iOS updates. Clear state boundaries mattered as much as the UI. Purchase-verification work did not mean every issue was resolved or every purchase approved.</p></div>
+</div>;
+export default PickNCareStory;

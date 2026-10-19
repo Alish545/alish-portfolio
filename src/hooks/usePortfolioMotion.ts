@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function usePortfolioMotion(root: RefObject<HTMLDivElement | null>) {
   useLayoutEffect(() => {
+    if (!root.current) return;
     const media = gsap.matchMedia();
     media.add("(prefers-reduced-motion: no-preference)", () => {
       const context = gsap.context(() => {
@@ -15,7 +16,7 @@ export function usePortfolioMotion(root: RefObject<HTMLDivElement | null>) {
           .from(".hero-portrait", { y: 24, opacity: 0, scale: 0.97 }, "-=0.8")
           .from(".hero-toolkit, .hero-scroll", { opacity: 0, y: 12, stagger: 0.12 }, "-=0.3");
 
-        gsap.utils.toArray<HTMLElement>(".section-heading, .project-row, .about-copy, .skill-row, .career-row, .contact-intro, .contact-form, .contact-bottom, footer").forEach((element) => {
+        gsap.utils.toArray<HTMLElement>(".section-heading, .experiment-card, .project-row, .about-copy, .skill-row, .career-row, .contact-intro, .contact-form, .contact-bottom, footer").forEach((element) => {
           gsap.from(element, {
             y: 28, opacity: 0, duration: 0.8, ease: "power2.out",
             scrollTrigger: { trigger: element, start: "top 92%", once: true },
