@@ -19,7 +19,8 @@ const Hero = () => {
       <div className="absolute inset-0">
         <img
           src={`${import.meta.env.BASE_URL}hero-bg.avif`}
-          alt="" aria-hidden="true"
+          alt=""
+          aria-hidden="true"
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/60 to-background"></div>
@@ -68,29 +69,48 @@ const Hero = () => {
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 text-left leading-relaxed">
                 {" "}
-                Hi, I'm Alish Tuladhar — a Frontend Developer with 1.5+ years of professional experience building responsive web and mobile applications with React.js, TypeScript, React Native, and Flutter.
+                Hi, I'm Alish Tuladhar — a Frontend Developer with 1.5+ years of
+                professional experience building responsive web and mobile
+                applications with React.js, TypeScript, React Native, and
+                Flutter.
               </p>
             </div>
 
             {/* CTA */}
             <div className="hero-actions flex flex-wrap gap-3 animate-fade-in animation-delay-300">
-              <a href="#contact" className="hero-contact-button">Contact Me <ArrowRight className="w-5 h-5" /></a>
+              <a href="#contact" className="hero-contact-button">
+                Contact Me <ArrowRight className="w-5 h-5" />
+              </a>
 
-              <DownloadCV className="hero-cv-button"/>
+              <DownloadCV className="hero-cv-button" />
             </div>
 
             {/* Social Links */}
             <div className="flex flex-wrap items-center gap-3 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow Me: </span>
               {[
-                { icon: FaGithub, href: "https://github.com/Alish545", label: "GitHub Personal", caption: "Personal" },
-                { icon: FaGithub, href: "https://github.com/Alish500", label: "GitHub Work", caption: "Work" },
                 {
-                  icon: FaLinkedin, label: "LinkedIn", caption: "",
+                  icon: FaGithub,
+                  href: "https://github.com/Alish545",
+                  label: "GitHub Personal",
+                  caption: "Personal",
+                },
+                {
+                  icon: FaGithub,
+                  href: "https://github.com/Alish500",
+                  label: "GitHub Work",
+                  caption: "Work",
+                },
+                {
+                  icon: FaLinkedin,
+                  label: "LinkedIn",
+                  caption: "",
                   href: "https://www.linkedin.com/in/alish-tuladhar-a6377831b?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
                 },
                 {
-                  icon: FaInstagram, label: "Instagram", caption: "",
+                  icon: FaInstagram,
+                  label: "Instagram",
+                  caption: "",
                   href: "https://www.instagram.com/alishtuladhar?igsh=cHgyNHZ3dmh4dHhr&utm_source=qr",
                 },
               ].map((social, idx) => {
@@ -107,7 +127,9 @@ const Hero = () => {
                     className="inline-flex items-center gap-2 p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                   >
                     <Icon className="w-5 h-5" />
-                    {social.caption && <span className="text-xs">{social.caption}</span>}
+                    {social.caption && (
+                      <span className="text-xs">{social.caption}</span>
+                    )}
                   </a>
                 );
               })}
@@ -122,7 +144,10 @@ const Hero = () => {
                 <img
                   src={`${import.meta.env.BASE_URL}profile-pic.webp`}
                   alt="Alish Tuladhar"
-                  width={1280} height={1600} fetchPriority="high" decoding="async"
+                  width={1280}
+                  height={1600}
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full aspect-4/5 object-cover rounded-2xl"
                 />
 
@@ -155,9 +180,18 @@ const Hero = () => {
           <div className="relative overflow-hidden">
             <div className="skills-marquee">
               {[0, 1].map((group) => (
-                <div className="skills-marquee-group" key={group} aria-hidden={group === 1 ? true : undefined}>
+                <div
+                  className="skills-marquee-group"
+                  key={group}
+                  aria-hidden={group === 1 ? true : undefined}
+                >
                   {skills.map((skill) => (
-                    <span key={skill} className="text-xl font-semibold text-muted-foreground/50">{skill}</span>
+                    <span
+                      key={skill}
+                      className="text-xl font-semibold text-muted-foreground/50"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               ))}
@@ -165,18 +199,18 @@ const Hero = () => {
           </div>
         </div>
 
-      <div className="hero-scroll flex justify-center animate-fade-in animation-delay-800 cursor-pointer z-10">
-        {" "}
-        <a
-          href="#projects"
-          className="flex flex-col items-center gap-2 text-muted-foreground z-10"
-        >
-          <span className="text-xs uppercase tracking-wider hover:text-primary transition-colors duration-300">
-            Scroll
-          </span>
-          <ChevronDown className="w-6 h-6 animate-bounce" />
-        </a>
-      </div>
+        <div className="hero-scroll flex justify-center animate-fade-in animation-delay-800 cursor-pointer z-10">
+          {" "}
+          <a
+            href="#projects"
+            className="flex flex-col items-center gap-2 text-muted-foreground z-10"
+          >
+            <span className="text-xs uppercase tracking-wider hover:text-primary transition-colors duration-300">
+              Scroll
+            </span>
+            <ChevronDown className="w-6 h-6 animate-bounce" />
+          </a>
+        </div>
       </div>
     </section>
   );

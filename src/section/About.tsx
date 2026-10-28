@@ -1,8 +1,69 @@
 const skillGroups = [
-["Web interfaces", "React.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS"],
-["Mobile applications", "React Native, NativeWind, Flutter, Dart, iOS / iPadOS"],
-["Data & application state", "TanStack Query, Zustand, REST APIs, Axios, React Hooks"],
-["Forms & delivery", "Formik, Yup, React Hook Form, Zod, GitHub, Xcode, TestFlight, App Store Connect"],
+  [
+    "Web interfaces",
+    "React.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS",
+  ],
+  [
+    "Mobile applications",
+    "React Native, NativeWind, Flutter, Dart, iOS / iPadOS",
+  ],
+  [
+    "Data & application state",
+    "TanStack Query, Zustand, REST APIs, Axios, React Hooks",
+  ],
+  [
+    "Forms & delivery",
+    "Formik, Yup, React Hook Form, Zod, GitHub, Xcode, TestFlight, App Store Connect",
+  ],
 ];
-const About = () => <section id="about" className="section-wrap section-space"><div className="section-heading"><p className="eyebrow">02 / A little about me</p><h2>Practical thinking.<br/><em>Careful execution.</em></h2></div><div className="about-grid"><div className="about-copy"><p>I'm a Junior Frontend Developer and B.Sc. CSIT graduate based in Kathmandu. At Binaryburst Solution, I work with designers, backend developers, QA, and DevOps to turn product requirements into usable web and mobile experiences.</p><p className="muted">My work spans healthcare bookings, property CRM workflows, and student learning. I enjoy the details that make an application useful: clear forms, reliable API integration, role-based flows, and offline access.</p><div className="education-note"><span className="eyebrow">Education & learning</span><h3>B.Sc. Computer Science & Information Technology</h3><p className="muted">Asian College of Higher Studies · Tribhuvan University<br/>2020 – 2025</p><p className="muted">React Native Full Course · Cursa · February 2026</p></div></div><div className="skills-list">{skillGroups.map(([title,description],i)=><div className="skill-row" key={title}><span className="skill-index">0{i+1}</span><div><h3>{title}</h3><p className="muted">{description}</p></div></div>)}</div></div></section>;
+const About = () => (
+  <section id="about" className="section-wrap section-space">
+    <div className="section-heading">
+      <p className="eyebrow">02 / A little about me</p>
+      <h2>
+        Practical thinking.
+        <br />
+        <em>Careful execution.</em>
+      </h2>
+    </div>
+    <div className="about-grid">
+      <div className="about-copy">
+        <p>
+          I'm a Junior Frontend Developer and B.Sc. CSIT graduate based in
+          Kathmandu. At Binaryburst Solution, I work with designers, backend
+          developers, QA, and DevOps to turn product requirements into usable
+          web and mobile experiences.
+        </p>
+        <p className="muted">
+          My work spans healthcare bookings, property CRM workflows, and student
+          learning. I enjoy the details that make an application useful: clear
+          forms, reliable API integration, role-based flows, and offline access.
+        </p>
+        <div className="education-note">
+          <span className="eyebrow">Education & learning</span>
+          <h3>B.Sc. Computer Science & Information Technology</h3>
+          <p className="muted">
+            Asian College of Higher Studies · Tribhuvan University
+            <br />
+            2020 – 2025
+          </p>
+          <p className="muted">
+            React Native Full Course · Cursa · February 2026
+          </p>
+        </div>
+      </div>
+      <div className="skills-list">
+        {skillGroups.map(([title, description], i) => (
+          <div className="skill-row" key={title}>
+            <span className="skill-index">0{i + 1}</span>
+            <div>
+              <h3>{title}</h3>
+              <p className="muted">{description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 export default About;

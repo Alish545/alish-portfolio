@@ -16,11 +16,14 @@ function App() {
   usePortfolioMotion(root);
   usePageAnchors();
   const projectId = new URLSearchParams(window.location.search).get("project");
-  if (projectId && /^[1-6]$/.test(projectId)) return <CaseStudy index={Number(projectId) - 1}/>;
+  if (projectId && /^[1-6]$/.test(projectId))
+    return <CaseStudy index={Number(projectId) - 1} />;
   return (
     <div ref={root} className="portfolio-motion min-h-screen overflow-x-hidden">
       <Navbar />
-      <a className="skip-link" href="#main-content">Skip to content</a>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <main id="main-content">
         <Hero />
         <Project />

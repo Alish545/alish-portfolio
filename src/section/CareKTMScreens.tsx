@@ -11,7 +11,9 @@ const screens = [
 ];
 
 const CareKTMScreens = ({ gallery = false }: { gallery?: boolean }) => (
-  <div className={`care-screens ${gallery ? "care-screens-gallery" : "care-screens-preview"}`}>
+  <div
+    className={`care-screens ${gallery ? "care-screens-gallery" : "care-screens-preview"}`}
+  >
     {(gallery ? screens : [screens[2], screens[1]]).map(({ src, label }) => (
       <figure key={label}>
         <img src={src} alt={`CareKTM Student — ${label}`} loading="lazy" />

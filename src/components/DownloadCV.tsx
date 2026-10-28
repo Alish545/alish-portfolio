@@ -12,7 +12,9 @@ const DownloadCV = ({ className = "text-link" }: Props) => {
     setError(false);
     let url: string | undefined;
     try {
-      const response = await fetch(`${import.meta.env.BASE_URL}Alish_Tuladhar_CV.pdf`);
+      const response = await fetch(
+        `${import.meta.env.BASE_URL}Alish_Tuladhar_CV.pdf`,
+      );
       if (!response.ok) throw new Error("Download failed");
       const blob = await response.blob();
       if (!blob.type.includes("pdf")) throw new Error("Invalid file");
@@ -32,12 +34,26 @@ const DownloadCV = ({ className = "text-link" }: Props) => {
       setLoading(false);
     }
   };
-  return <span className="cv-download">
-    <button type="button" className={className} onClick={download} disabled={loading} aria-busy={loading}>
-      {loading ? <LoaderCircle size={16} className="cv-spinner"/> : <Download size={16}/>}
-      {loading ? "Preparing CV…" : "Download CV"}
-    </button>
-    <span className="cv-download-status" role="status">{error ? "Couldn't download. Please try again." : ""}</span>
-  </span>;
+  return (
+    <span className="cv-download">
+      <button
+        type="button"
+        className={className}
+        onClick={download}
+        disabled={loading}
+        aria-busy={loading}
+      >
+        {loading ? (
+          <LoaderCircle size={16} className="cv-spinner" />
+        ) : (
+          <Download size={16} />
+        )}
+        {loading ? "Preparing CV…" : "Download CV"}
+      </button>
+      <span className="cv-download-status" role="status">
+        {error ? "Couldn't download. Please try again." : ""}
+      </span>
+    </span>
+  );
 };
 export default DownloadCV;
